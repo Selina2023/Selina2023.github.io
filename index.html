@@ -1,0 +1,641 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<!-- head -->
+<head>
+  <script>
+    (function () {
+        var a_idx = 0;
+        window.onclick = function (event) {
+            var a = new Array("✨", "🤖", "📚", "🎹", "🎵", "💗");
+
+            var heart = document.createElement("b");
+            heart.onselectstart = new Function('event.returnValue=false');
+
+            document.body.appendChild(heart).innerHTML = a[a_idx];
+            a_idx = (a_idx + 1) % a.length;
+            heart.style.cssText = "position: fixed;left:-100%;";
+
+            var f = 16, 
+                x = event.clientX - f / 2, 
+                y = event.clientY - f,
+                c = randomColor(), 
+                a = 1,
+                s = 1.2; 
+
+            var timer = setInterval(function () { 
+                if (a <= 0) {
+                    document.body.removeChild(heart);
+                    clearInterval(timer);
+                } else {
+                    heart.style.cssText = "font-size:16px;cursor: default;position: fixed;color:" +
+                        c + ";left:" + x + "px;top:" + y + "px;opacity:" + a + ";transform:scale(" +
+                        s + ");";
+
+                    y--;
+                    a -= 0.016;
+                    s += 0.002;
+                }
+            }, 15)
+
+        }
+        function randomColor() {
+
+            return "rgb(" + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + "," + (~~(Math
+            .random() * 255)) + ")";
+
+        }
+    }());
+
+  </script>
+
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Yufei Ding   |   丁昱菲</title>
+
+
+  <div id="div1" style="width:60px; height:10000px; font-size:40px; color:#FF00FF; font-weight:bold;">🐷</div> 
+  <script> 
+                        
+    div1.style.position="fixed";
+    div1.style.visibility="hidden";
+    var PT;
+    var bool=false;
+    var size=30;
+    function out(){
+      div1.style.visibility="hidden";
+      div1.style.fontSize="40px";
+      size=40;
+      bool=false;
+      divsize();
+    }
+    function move(){
+      var x=window.event.x+document.body.clientLeft;
+      var y=window.event.y+document.body.clientTop;
+      // var x = window.event.clientX;
+      // var y = window.event.clientY;
+      div1.style.left=String(x)+"px";
+      div1.style.top=String(y)+"px";
+      div1.style.visibility="visible";
+      bool=true;
+      divsize();
+    }
+    function divsize(){
+      if (bool==true){
+        if (size>=200){out();}else{
+          size=size+1;
+
+          div1.style.fontSize=String(size)+"px";
+          PT=setTimeout("divsize()",200);
+        }
+      }else window.clearTimeout(PT);
+    }
+    </script>
+  
+
+
+  <meta name="author" content="Haoran Geng">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link rel="icon" type="image/png" href="images/icon.png">
+</head>
+
+<!-- bib hide -->
+<script type="text/javascript">
+  function hideshow(which){
+  if (!document.getElementById)
+  return
+  if (which.style.display=="block")
+  which.style.display="none"
+  else
+  which.style.display="block"
+  }
+
+
+  </script>
+
+
+
+
+
+<!-- body -->
+<body>
+
+
+  <!-- self-intro --> 
+  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <tr style="padding:0px">
+      <td style="padding:0px">
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr style="padding:0px">
+            <td style="padding:2%;width:55%;vertical-align:middle">
+              <p style="text-align:center">
+                <name> Yufei Ding | 丁昱菲</name>
+                <!-- <span style="font-size:20px ">将鼠标指向这里:</span>
+                <a style="color:#3300FF; font-size:20px; font-style:italic " onMouseMove="move()" onMouseOut="return out();">将飞出一个我的标记</a> -->
+
+              </p>
+              <p style="text-align: justify">
+              <!-- <intro>I am a senior student in 
+                <a href="https://cfcs.pku.edu.cn/english/research/turing_program/introduction1/index.htm" target="_blank">
+                  <d>Turing Class</d></a> 
+                at the <a href="https://eecs.pku.edu.cn/" target="_blank">
+                  <d>School of Electronic Engineering and Computer Science(EECS)</d></a>,
+                   <a href="https://english.pku.edu.cn/" target="_blank"><d>Peking University</d></a> with GPA ranking <strong>1</strong>/95. I'm also a research visitor at <a href="https://www.stanford.edu/" target="_blank"><d>Stanford University</d></a>
+                and a research intern at <a href="https://bigai.ai/" target="_blank"><d>Beijing Institute for General Artificial Intelligence (BIGAI)</d></a>. 
+                I am honored to be advised by Prof. <a href="https://hughw19.github.io/" target="_blank">
+                  <d>He Wang</d></a>,  Prof. <a href="https://geometry.stanford.edu/member/guibas/" target="_blank">Leonidas J. Guibas</a> and Dr.
+                  <a href="https://siyuanhuang.com/" target="_blank"><d>Siyuan Huang</d></a>. 
+                  In addition, I am privileged to work closely with 
+                Prof. <a href="https://ericyi.github.io/" target="_blank"><d>Li Yi</d></a>, 
+                Prof. <a href="https://zsdonghao.github.io/" target="_blank"><d>Hao Dong</d></a>,
+                Prof. <a href="https://www.yangyaodong.com/" target="_blank"><d>Yaodong Yang</d></a>
+                  and  Prof. <a href="https://cfcs.pku.edu.cn/baoquan/" target="_blank"><d>Baoquan Chen</d></a>.
+                  I am also grateful to have grown up and studied with my twin brother <a class="a1" href="https://gengyiran.github.io/" target="_blank">Yiran Geng</a>, which has been a truly unique and special experience for me.
+                
+                </intro> -->
+                <intro>I am a sophomore in <a href="https://www.cis.pku.edu.cn/rcpy/zbpy.htm" target="_blank">
+                  <d>Zhi Class</d></a> at the <a href="https://eecs.pku.edu.cn/" target="_blank">
+                  <d>School of Electronic Engineering and Computer Science(EECS)</d></a> of
+                   <a href="https://english.pku.edu.cn/" target="_blank"><d>Peking University</d></a>,
+                  where I lead the Academic Committee of Intelligence Science and Technology (ACIST).
+                  I major in Artificial Intelligence, with GPA ranking top 5%. 
+                  I am currently advised by Prof. <a href="https://hughw19.github.io/" target="_blank">
+                    <d>He Wang</d></a> at Embodied Perception and InteraCtion (EPIC) Lab, 
+                  and was previously an intern at <a href="https://www.shlab.org.cn/" target="_blank">
+                    <d>Shanghai Artificial Intelligence Laboratory</d></a>. My research interest lies in robotics and machine learning, with the goal of
+                    enabling embodied agents to tackle complex tasks in 3D environments.
+                  </intro>
+              <p style="text-align:center">
+                <a href="mailto:selina@stu.pku.edu.cn" target="_blank">Email</a> &nbsp/&nbsp
+                <!-- <a href="https://scholar.google.com/citations?user=Inr-6rEAAAAJ" target="_blank">Google Scholar</a> &nbsp/&nbsp -->
+                <a href="https://github.com/Selina2023/" target="_blank">Github</a>&nbsp/&nbsp
+                <!-- <a href="https://twitter.com/HaoranGeng2/" target="_blank">Twitter</a>&nbsp/&nbsp -->
+                <a href="images/ACIST_wechat_account.pdf" target="_blank">WeChat Official Account</a>
+              </p>
+            </td>
+            <td style="padding:0%; width:26%; max-width:26%;"> <!-- move the photo a bit left -->
+              <br>
+              <!-- <br> -->
+              <img style="padding:1%; width:100%; max-width:80%;  display: block; margin-left: auto; margin-right: auto; " alt="profile photo" src="images/selfie.jpg" class="hoverZoomLink">
+              <a href="https://hits.seeyoufarm.com" target="_blank">
+                <img 
+                  src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgeng-haoran.github.io&count_bg=%23FF8400&title_bg=%23545353&icon=tableau.svg&icon_color=%23F3F209&title=hits&edge_flat=false" 
+                  style="display: block; margin-left: auto; margin-right: auto; width: 55%;"/>
+              </a>
+            </td>
+            <!-- <td style="padding:5%;width:37%;max-width:37%"> 
+              <img style="width:100%;max-width:100%" alt="profile photo" src="images/face3.jpg" class="hoverZoomLink">
+              <a href="https://hits.seeyoufarm.com" target="_blank"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgeng-haoran.github.io&count_bg=%23FF8400&title_bg=%23545353&icon=tableau.svg&icon_color=%23F3F209&title=hits&edge_flat=false"/></a>
+            </td> -->
+          </tr>
+        </tbody></table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    </tr>
+  </tbody></table>
+
+  <!-- News -->
+  <!-- <table style="width:90%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          
+  
+    <heading>News</heading>
+    <br>
+    <td style="padding:0px;width:100%;vertical-align:middle">
+    <p>
+      <li>[2024/03] I am honored to receive the <b><font color='red'>Berkeley Fellowship Award</font></b> and <b><font color='red'>Stanford Graduate Fellowship Award</font></b>.</li>
+      <li>[2023/12] Excited to announce <a href="https://simulately.wiki/" target="_blank">Simulately</a>🤖, a go-to toolkit for robotics researchers navigating diverse simulators!</li>
+      <li>[2023/12] I'm honored to be selected as one of the <b><font color='red'>Person of the Year of Peking University</font></b>.</li>
+      <li>[2023/10] I gave an Oral Presentation on UniDexGrasp++ at ICCV 2023.</li>
+      <li>[2023/10] 🎉 UniDexGrasp++ is selected as <b><font color='red'>Best Paper Finalist</font></b> at ICCV 2023.</li>
+      <li>[2023/08] 🎉 UniDexGrasp++ is selected as <b><font color='red'>Oral Presentation</font></b> at ICCV 2023.</li>
+      <li>[2023/07] 🎉 Two papers get accepted to ICCV 2023 with UniDexGrasp++ receiving final reviews of <b><font color='red'>all strong accepts (the highest ratings)</font></b>.</li>
+      <li>[2023/07] 🎉 One paper gets accepted to Machine Learning Journal.</li>
+      <li>[2023/07] We will present <em>UniDexGrasp++</em> at RSS 2023 @ <a href="https://learn-dex-hand.github.io/rss2023/" target="_blank">Learning Dexterous Manipulation</a> on July 14, 2023</li>
+      <li>[2023/06] Welcome to check out our posters for <a href="https://cvpr.thecvf.com/virtual/2023/poster/22552" target="_blank">GAPartNet</a>, 
+        <a href="https://cvpr.thecvf.com/virtual/2023/poster/22553" target="_blank">PartManip</a> and 
+        <a href="https://cvpr.thecvf.com/virtual/2023/poster/21614" target="_blank">UniDexGrasp</a> at CVPR 2023 on June 20, 2023</li>
+      <li>[2023/06] I will present <em>GAPartNet</em> at CVPR 2023 @ <a href="https://struco3d.github.io/cvpr2023/" target="_blank">StruCo3D</a> on June 18, 2023 </li>
+      <li>[2023/06] I will present <em>Learning Part-Aware Visual Actionable Affordance for 3D Articulated Object Manipulation</em> at CVPR 2023 @ <a href="https://sites.google.com/view/cvpr2023-3d-vision-robotics" target="_blank">3DVR</a> on June 18, 2023</li>
+      <li>[2023/03] 🎉 GAPartNet is selected as a <b><font color='red'>highlight</font></b> at CVPR 2023 (Top 10% of accepted papers, top 2.5% of submissions).</li>
+      <li>[2023/02] 🎉 Three papers get accepted to CVPR 2023 with GAPartNet receiving final reviews of <b><font color='red'>all accepts (the highest ratings)</font></b>.</li>
+      <li>[2023/01] 🎉 One paper gets accepted to ICRA 2023.</li>
+    </p> 
+  </td>
+  </tr>
+  </tbody></table> -->
+
+  <!-- Research -->
+  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <br>
+    <heading>Research</heading>
+    <br>
+
+  <!-- Simulately -->
+    <tr onmouseout="malle_stop()" onmouseover="malle_start()">
+      <td style="padding:30px;width:20%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='malle_image'>
+            <!-- <br> -->
+            <img src='images/simulately_logo.png' width="180"></div>
+          <!-- <br> -->
+          <img src='images/simulately_logo.png' width="180">
+        </div>
+        <script type="text/javascript">
+          function malle_start() {
+            document.getElementById('malle_image').style.opacity = "1";
+          }
+          function malle_stop() {
+            document.getElementById('malle_image').style.opacity = "0";
+          }
+          malle_stop()
+        </script>
+      </td>
+      <td style="padding:20px;width:70%;vertical-align:middle">
+        <a href="https://simulately.wiki/" target="_blank">
+          <papertitle><br>Simulately: Handy information and resources for physics simulators for robot learning research.</papertitle>
+        </a>
+      <br>
+        <a:focus>Haoran Geng</a:focus>
+        <a class="a2" href="https://yuyangli.com/" target="_blank">Yuyang Li</a>,
+        <a class="a2" href="https://yzqin.github.io/" target="_blank">Yuzhe Qin</a>,
+        <a class="a2" href="http://stevengong.net/" target="_blank">Ran Gong</a>,
+        <a class="a2" href="https://wensi-ai.github.io/" target="_blank">Wensi Ai</a>,
+        <a class="a2" href="https://cypypccpy.github.io/" target="_blank">Yuanpei Chen</a>,
+        <a class="a2" href="https://xiaoyao-li.github.io/" target="_blank">Puhao Li</a>,
+        <a class="a2" href="https://dali-jack.github.io/Junfeng-Ni/" target="_blank">Junfeng Ni</a>,
+        <a class="a2" href="https://www.zhou-xian.com/" target="_blank">Zhou Xian</a>,
+        <a class="a2" href="http://wei.songl.in/" target="_blank">Songlin Wei</a>,
+        <a class="a2" href="https://qq456cvb.github.io/" target="_blank">Yang You</a>,
+        <a class="a2" href="https://github.com/Selina2023" target="_blank">Yufei Ding</a>,
+        <a class="a2" href="https://github.com/mzhmxzh" target="_blank">Jialiang Zhang</a>
+        <br>
+        <a href="https://simulately.wiki/" target="_blank">Website</a>
+        /
+        <a href="https://github.com/geng-haoran/Simulately" target="_blank">Github</a>
+
+        <br>
+        <em><strong>Open-source Project</strong></em>
+        <p></p>
+        <p> Simulately is a project where we gather useful information of robotics & physics simulators for cutting-edge robot learning research.</p>
+      </td>
+    </tr>
+  </tbody></table>
+
+  <!-- Before 2022 -->
+  <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <br>
+    <heading>Before 2022</heading>
+    <br>
+      <td style="padding:20px;width:30%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='malle_image'>
+            <br>
+            <img src='images/YINGCAI2.png' width="190"></div>
+            <br>
+        </div>
+        <script type="text/javascript">
+          function malle_start() {
+            document.getElementById('malle_image').style.opacity = "1";
+          }
+          function malle_stop() {
+            document.getElementById('malle_image').style.opacity = "0";
+          }
+          malle_stop()
+        </script>
+      </td>
+      <td style="padding:20px;width:70%;vertical-align:middle">
+        <a href="pdf/YINGCAI.pdf" target="_blank">
+          <papertitle>Ministry of Education Talent Program Thesis (Physics Track)</papertitle>
+        </a>
+        <br>
+        <a:focus><strong>Haoran Geng</strong></a:focus>, 
+        <a class="a2", href="https://gengyiran.github.io/" target="_blank">Yiran Geng</a>, 
+        <a:focus>Xintian Dong</a:focus>,
+        <a:focus>Yue Meng</a:focus>,
+        <a:focus>Xujv Sun</a:focus>,
+        <a:focus>Houpu Niu</a:focus>
+        <br>
+        <a href=pdf/YINGCAI.pdf target="_blank">PDF</a>
+        <br>
+        <p>
+          I was selected for the Ministry of Education Talent Program and conducted physics research at Nankai University during my high school years.
+      </td>
+  </tbody></table> -->
+
+  <!-- Recent Talks -->
+  <!-- <table style="width:90%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <br>
+          <heading>Recent Talks</heading>
+        <br>
+        <td style="padding:0px;width:100%;vertical-align:middle">
+          <P>
+            <li>I gave an Oral Presentation on <em>UniDexGrasp++</em> at <a href="https://iccv2023.thecvf.com/main.conference.program-107.php" target="_blank">ICCV</a> on October 4, 2023. -->
+              <!-- <br>
+              <a href="./images/shenlan_poster.jpg" target="_blank">Poster</a>
+              /
+              <a href="https://www.shenlanxueyuan.com/open/course/195" target="_blank">Website</a>
+              /
+              <a href="https://www.shenlanxueyuan.com/open/course/195/lesson/180/liveToVideoPreview" target="_blank">Video</a> -->
+            <!-- </li>
+            <li>I presented <em>Towards Generalizable Object Perception and Manipulation</em> at <a href="www.shenlanxueyuan.com" target="_blank">Shenlan</a> Open Courses on July 23, 2023.
+              <br>
+              <a href="./images/shenlan_poster.jpg" target="_blank">Poster</a>
+              /
+              <a href="https://www.shenlanxueyuan.com/open/course/195" target="_blank">Website</a>
+              /
+              <a href="https://www.shenlanxueyuan.com/open/course/195/lesson/180/liveToVideoPreview" target="_blank">Video</a>
+            </li>
+            <li>I presented <em>Towards Generalizable Object Perception and Manipulation</em> at <a href="https://engineering.stanford.edu/students-academics/programs/global-engineering-programs/chinese-ugvr/" target="_blank">Stanford UGVR</a> Research Salon on July 9, 2023.
+              <br>
+              <a href="https://drive.google.com/file/d/1hfktvO5A2P89nd09zvnqIxmBa282MpEO/view?usp=sharing" target="_blank">Slides</a>
+            </li>
+            <li>I presented <em>GAPartNet</em> at CVPR 2023 @ <a href="https://struco3d.github.io/cvpr2023/" target="_blank">StruCo3D</a> on June 18, 2023.
+              <br>
+              <a href="https://drive.google.com/file/d/1n-KZzTjg7J_AW2uxd_buxFd0CVsph02u/view?usp=sharing" target="_blank">Video</a>
+              /
+              <a href="pdf/GAPartNet_poster.pdf" target="_blank">Poster</a>
+            </li>
+            <li>I presented <em>Learning Part-Aware Visual Actionable Affordance for 3D Articulated Object Manipulation</em> at 
+              CVPR 2023 @ <a href="https://sites.google.com/view/cvpr2023-3d-vision-robotics" target="_blank">3DVR</a> on June 18, 2023.
+              <br>
+              <a href="https://drive.google.com/file/d/19bPWbLLnsQTBU5xT64yRQ6HgbOjrZoKv/view?usp=sharing" target="_blank">Video</a>
+            </li>
+            <li>I presented <em>Generalizable Cross-Category Object Perception and Manipulation</em> at 
+              <a href="http://dev3.noahlab.com.hk/" target="_blank"> Noah's Ark Lab, Huawei</a> on June 2, 2023.
+              <br>
+            </li>
+            <li>I presented <em>PartManip: Learning Cross-Category Generalizable Part Manipulation 
+              Policy from Point Cloud Observations</em> at 
+              <a href="https://mp.weixin.qq.com/s/jx8lbVnEugQSciXJ_j4VSQ" target="_blank">Turing 
+                Student Research Forum</a> on May 27, 2023 and was 
+                honored to receive the <strong>Best Presentation Award</strong> and <strong>Best Poster Award</strong>.
+              <br>
+              <a href="https://mp.weixin.qq.com/s/jx8lbVnEugQSciXJ_j4VSQ" target="_blank">Media</a>
+              /
+              <a href="pdf/PartManip_poster.pdf" target="_blank">Poster</a>
+            </li>
+            <li>I presented <em>Generalizable Part-based Cross-Category Object Perception and Manipulation</em>
+              at <a href="https://mp.weixin.qq.com/s/zun5HXDwY6b79UJhhOxkIA" target="_blank">CVPR2023 Seminar</a> (hosted by 
+              SenseTime) on May 28, 2023.
+              <br>
+              <a href="https://mp.weixin.qq.com/s/zun5HXDwY6b79UJhhOxkIA" target="_blank">Media</a>
+              /
+              <a href="pdf/GAPartNet_poster.pdf" target="_blank">Poster</a>
+            </li>
+            <li>I presented <em>GAPartNet: Cross-Category Domain-Generalizable Object Perception and 
+              Manipulation via Generalizable and Actionable Parts</em> at 
+              <a href="https://mp.weixin.qq.com/s/Whnkr9yPa4VXk4XflQL5Uw" target="_blank">Scientific 
+                Research Exhibition</a> (hosted by School of EECS, PKU) on May 13, 2023 and was 
+                honored to receive the <strong>Best Presentation Award</strong>.
+              <br>
+              <a href="https://mp.weixin.qq.com/s/Whnkr9yPa4VXk4XflQL5Uw" target="_blank">Media</a>
+              /
+              <a href="pdf/GAPartNet_poster.pdf" target="_blank">Poster</a>
+            </li>
+            <li>I presented <em>GAPartNet: Cross-Category Domain-Generalizable Object Perception and Manipulation via Generalizable and Actionable Parts</em> at <a href="http://www.csig3dv.net/" target="_blank">China3DV 2023</a> on April 21, 2023, which was selected as a <strong>Fastforward Report</strong> (<strong>11</strong>/75).
+              <br>
+              <a href="http://www.csig3dv.net/ShowPoster.html" target="_blank">Media</a>
+              /
+              <a href="images/GAPartNet_China3DV_poster.jpg" target="_blank">Poster</a>
+              /
+              <a href="video/GAPartNet_China3DV.mp4" target="_blank">Video</a>
+            </li>
+            <li>I presented <em>Learning Generalizable and Actionable Parts for Cross-Category Object Perception and Manipulation</em> at the <a href="https://cfcs.pku.edu.cn/news/240724.htm" target="_blank">Turing Student Research Forum</a> at CFCS, Peking University on June 8, 2022 and was honored to receive the <strong>Outstanding Presentation Award</strong>.
+              <br>
+              <a href="https://www.bilibili.com/video/BV1Rv4y1376L?p=10" target="_blank">Video</a>
+              /
+              <a href="https://cfcs.pku.edu.cn/news/240724.htm" target="_blank">Media</a>
+            </li>
+          </P>
+        </td>
+
+  </tbody></table> -->
+    
+  <!-- Services -->
+  <table style="width:90%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+      <tr>
+        <br>
+        <heading>Services</heading>
+        <br>
+      <td style="padding:0px;width:100%;vertical-align:middle">
+        <p>
+          <li>Leader of <a href="https://www.cis.pku.edu.cn/rcpy/zbpy.htm" target="_blank">Zhi Class</a></strong> and Cofounder of its <a href="images/ACIST_wechat_account.pdf" target="_blank">public official account</a></li>
+        </p>
+        <p>
+          <li>Chairman of the Academic Committee of Intelligence Science and Technology (ACIST)</li>
+        </p>
+        <p>
+          <li>Founder of the EECS Survival Manual, which assists students at Peking University in exploring and achieving their goals by offering comprehensive information and guidance</a></li>
+        </p>
+      </td>
+    </tr>
+  </tbody></table>
+
+  <!-- Experience -->
+
+  <table width="100%" align="center" border="0" cellpadding="10"><tbody>
+      <br>
+          <heading>Experience</heading>
+      <br>
+      <!-- <tr>
+        <td style="padding-left:18px;padding-right:20px;width:20%;vertical-align:middle"><img src="images/Stanford.png", width="105"></td>
+        <td width="100%" valign="center">
+          <strong><a href="https://www.stanford.edu/" target="_blank"><papertitle>Stanford University</papertitle> </a></strong>
+          <br> <em>2023.02 - Present</em><br>  <strong>Visiting Research Student through the </strong><a href="https://engineering.stanford.edu/students-academics/programs/global-engineering-programs/chinese-ugvr/" target="_blank">UGVR Program </a> 
+          <br> Research Advisor: Prof. <a href="https://geometry.stanford.edu/member/guibas/" target="_blank">Leonidas J. Guibas</a>
+        </td>
+      </tr>   -->
+      <!-- <tr>
+        <td style="padding-left:20px;padding-right:20px;width:20%;vertical-align:middle"><img src="images/Bigai.png", width="108"></td>
+        <td width="90%" valign="center">
+          <strong><a href="https://www.bigai.ai/" target="_blank"><papertitle>Beijing Institute for General Artificial Intelligence (BIGAI)</papertitle></a></strong>
+          <br> <em>2021.12 - Present</em>
+          <br> <strong>Research Intern</strong>
+          <br> Research Advisor: <a href="https://siyuanhuang.com/" target="_blank">Siyuan Huang</a> 
+          <br> Academic Advisor: Prof. <a href="http://www.stat.ucla.edu/~sczhu/" target="_blank">Song-Chun Zhu</a>
+        </td>
+      </tr> -->
+      <tr>
+        <td style="padding-left:20px;padding-right:20px;width:20%;vertical-align:middle"><img src="images/galbot.png", width="108"></td>
+        <td width="90%" valign="center">
+          <strong><a href="https://www.galbot.com/" target="_blank"><papertitle>GALBOT</papertitle></a></strong>
+          <br> <em>2023.10 - Present</em>
+          <br> <strong>Research Intern</strong>
+          <br> Research Advisor: <a href="https://hughw19.github.io/" target="_blank">He Wang</a> 
+        </td>
+      </tr> 
+      <tr>
+        <td style="padding-left:27px;padding-right:20px;width:20%;vertical-align:middle"><img src="images/ShanghaiAI.jpg", width="90"></td>
+        <td width="90%" valign="center">
+          <strong><a href="https://www.shlab.org.cn/" target="_blank"><papertitle>Shanghai Artificial Intelligence Laboratory</papertitle></a></strong>
+          <br> <em>2023.6 - 2023.9</em>
+          <br> <strong>Summer Research Intern</strong>
+          <br> Research Team: <a href="https://github.com/open-mmlab" target="_blank">OpenMMLab</a> 
+        </td>
+      </tr> 
+      <tr>
+        <br>
+        <td style="padding-left:20px;padding-right:20px;width:20%;vertical-align:middle"><img src="images/Zhilogo.jpg", width="108"></td>
+        <td width="90%" valign="center">
+          <strong><a href="https://www.cis.pku.edu.cn/rcpy/zbpy.htm" target="_blank">Zhi Class</a></strong>
+          <br> <em>2022.09 - Present</em>
+          <br> <strong> Class Leader </strong>
+          <br> GPA Ranking : 1<sup>st</sup>
+          <br> Academic Advisor: Prof. <a href="https://cfcs.pku.edu.cn/baoquan/" target="_blank">Baoquan Chen</a>
+        </td>
+    </tr>
+      <tr>
+          <br>
+          <td style="padding-left:20px;padding-right:20px;width:20%;vertical-align:middle"><img src="images/PKU.png", width="108"></td>
+          <td width="90%" valign="center">
+            <strong><a href="https://english.pku.edu.cn/" target="_blank"><papertitle>Peking University (PKU)</papertitle></a></strong>
+            <br> <em>2022.09 - Present</em>
+            <br> <strong> Undergraduate Student</strong>
+            <br> Major:  Intelligence Science and Technology (Artificial Intelligence)
+            <!-- <br> Academic Advisor: Prof. <a href="https://cfcs.pku.edu.cn/baoquan/" target="_blank">Baoquan Chen</a> -->
+          </td>
+      </tr>
+      
+        
+  </tbody></table>
+
+  <!-- Selected Awards and Honors -->
+  <table style="width:90%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          
+          <br>
+          <heading>Selected Awards</heading>
+
+          <!-- <br>
+        <td style="padding:0px;width:100%;vertical-align:middle">
+          <p>
+            <li>2024: Stanford Graduate Fellowship Award, Stanford</li>
+          </p>
+          <p>
+            <li>2024: Berkeley Fellowship Award, UC Berkeley</li>
+          </p>
+          <p>
+            <li>2023: ICCV Best Paper Award (Marr Prize) Finalist</li>
+          </p>
+          <p>
+            <li>2023: Person of the Year of Peking University (10 people/year)</li>
+          </p>
+          <p>
+            <li>2023: Research Rising Star Award (First Price), BIGAI (5000RMB¥)</li>
+          </p>
+          <p>
+            <li>2023: Outstanding Overseas Exchange Scholarship (20000RMB¥)</li>
+          </p>
+          <p>
+            <li>2023: Academic Innovation Award of Peking University</li>
+          </p>
+          <p>
+            <li>2023: May Fourth Scholarship (<strong>Highest-level Scholarship</strong> for Peking University, <strong>125</strong>/65k+, 12000RMB¥)</li>
+          </p>
+          <p>
+            <li>2021-2023: Merit Student of Peking University</li>
+          </p>
+          <p>
+            <li>2023: Turing Student Research Forum: Best Presentation Award (3000RMB¥) & Best Poster Award (1000RMB¥)</li>
+          </p> -->
+          <!-- <p>
+            <li>2023: Turing Student Research Forum: Best Poster Award (1000RMB¥)</li>
+          </p> -->
+          <!-- <p>
+            <li>2023: School of EECS Research Exhibition: Best Presentation Award (3000RMB¥)</li>
+          </p>
+          <p>
+            <li>2022: Center on Frontiers of Computing Studies (CFCS) Outstanding Student</li>
+          </p>
+          <p>
+            <li>2022: Arawana Scholarship (12000RMB¥)</li>
+          </p>
+          <p>
+            <li>2021-2023: Zhongying Moral Education Scholarship (12000RMB¥)</li>
+          </p> -->
+          <!-- <p>
+            <li>2022: Merit Student of Peking University</li>
+          </p> -->
+          <!-- <p>
+            <li>2023: Turing Student Research Forum: Outstanding Presentation Award (1000RMB¥)</li>
+          </p> -->
+          <p>
+            <li>2023: SenseTime Scholarship - Most Promising Award</li>
+          </p>
+          <p>
+            <li>2023: Academic Innovation Award of Peking University (Youngest)</li>
+          </p>
+          <p>
+            <li>2023: <strong>National Scholarship</strong> (Highest honor for undergraduates)</li>
+          </p>
+          <p>
+            <li>2023: Merit Student of Peking University</li>
+          </p>
+          <!-- <p>
+            <li>2023: SenseTime Scholarship (<strong>Youngest</strong> winner, <strong>30</strong>/year in China, 20000RMB¥)</li>
+          </p> -->
+          <p>
+            <li>2023: Grand Finalist in Peking University Pro-Am English Debate Competition</li>
+          </p>       
+          <p>
+            <li>2023: Second Prize in Jiukun Programming Competition</li>
+          </p>       
+          <p>
+            <li>2022: Peking University Freshman Scholarship</li>
+          </p>
+          <p>
+            <li>2022: Outstanding Graduate Award of <a href="https://www.shenzhong.net/" target="_blank">Shenzhen Middle School</a></li>
+          </p>
+          <p>
+            <li>2020: First Prize in Chinese Physics Olympiad (CPhO), Guangdong Province</li>
+          </p>
+          <!-- <p>
+            <li>2020: China University Computer Competition - Group Programming LadderCompetition Silver Medalist</li>
+          </p> -->
+          <!-- <p>
+            <li>2019: The 36th Chinese Physics Olympiad(CPHO) Silver Medalist</li>
+          </p>
+          <p>
+            <li>2019: The First Prize of National High School Mathematics Contest, Tianjin, China</li>
+          </p> -->
+        </td>
+      </tr>
+  </tbody></table>
+
+  <!-- Miscellaneous -->
+  <!-- <table style="width:90%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <br>
+          <heading>Miscellaneous</heading>
+          <br>
+        <td style="padding:0px;width:100%;vertical-align:middle">
+          
+          <p>
+            In addition to my studies and research, I have a wide range of interests. 
+            <br><li>I love sports and excel in middle-distance running🏃‍♂️, swimming🏊‍♂️, etc. I am also honored to be awarded the title of <a href="images/sport.png" target="_blank">Excellent Level Athlete (Level 3)</a> at Peking University.</li> 
+            <br><li>I am very interested in art🥳 and have also enrolled in the <em>“Computing and Arts” program</em> by Prof. <a href="https://cfcs.pku.edu.cn/baoquan/" target="_blank">Baoquan Chen</a> and Prof. <a href="https://philpeople.org/profiles/feng-peng" target="_blank">Feng Peng</a> in anticipation of making great art through computing and programming. </li>
+            <br><li>I enjoy hip-hop😎, piano🎹, and  painting🎨, and I have been fortunate enough to have earned the title of  <a href="images/art.png" target="_blank">Artistic Specialists Student</a>.</li>
+            <br><li>I have a passion for philanthropy💖. I have participated in many charity events, and for my outstanding performance and contributions, I have been honored to receive the <a href="https://youth.pku.edu.cn/tzgg/zytz/355467.htm" target="_blank">Zhongying Moral Education Scholarship</a> for two consecutive years.</li>
+            <br><li>To promote computer knowledge💻, I became one of the leaders of <a href="https://lcpu.club/wiki/index.php?title=%E9%A6%96%E9%A1%B5" target="_blank">Linux Club of Peking University(LCPU)</a>, helping to popularize computer knowledge with students at Peking University.</li> 
+          </p>
+        </td>
+      </tr>
+  </tbody></table> -->
+  
+  <!-- Aknowledgements -->
+  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <tr>
+      <!-- <br> -->
+      <!-- <br> -->
+      <hr>
+        <p style="text-align:center">
+          This homepage is designed based on <a href="https://geng-haoran.github.io/">Haoran Geng</a> and <a href="https://jonbarron.info/">Jon Barron</a>'s website. 
+
+          <!-- <br>
+          © 2024 Haoran Geng -->
+        </p>
+      </td>
+      </tr>
+  </tbody></table>
+ 
+</body>
+</html>
