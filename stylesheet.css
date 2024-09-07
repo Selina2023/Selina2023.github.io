@@ -65,9 +65,9 @@
 
 
 a {
-  color: #fe6a00e9;
+  color: #ec690be3;
   text-decoration: none;
-  text-shadow: 0px 0px 1px rgb(235, 255, 58);
+  text-shadow: 0px 0px 1px rgb(243, 229, 32);
   
 }
 b {
@@ -130,7 +130,8 @@ heading2 {
 papertitle {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 14px;
-  font-weight: 700
+  font-weight: 700;
+  /* text-decoration-color: #964b00 */
 }
 
 name {
